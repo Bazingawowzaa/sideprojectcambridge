@@ -168,12 +168,7 @@
             </div>
 
             <div class="signup-form" id="signupForm">
-                <form action="https://formsubmit.co/sideprojectcambridge@gmail.com" method="POST" id="actualForm">
-                    <!-- FormSubmit configuration -->
-                    <input type="hidden" name="_subject" value="New signup: Side Project Network">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-
+                <form id="actualForm">
                     <div class="form-group">
                         <label>Name <span class="required">*</span></label>
                         <input type="text" name="name" required placeholder="Your full name">
@@ -299,26 +294,37 @@
             e.preventDefault();
 
             const form = e.target;
-            const formData = new FormData(form);
             const submitBtn = form.querySelector('.submit-btn');
+
+            // Collect checkbox values
+            const wantsCheckboxes = form.querySelectorAll('input[name="wants"]:checked');
+            const wantsValues = Array.from(wantsCheckboxes).map(cb => cb.value).join(', ');
+
+            // Build JSON payload
+            const data = {
+                name: form.querySelector('input[name="name"]').value,
+                email: form.querySelector('input[name="email"]').value,
+                college: form.querySelector('select[name="college"]').value,
+                study: form.querySelector('input[name="study"]').value,
+                project: form.querySelector('textarea[name="project"]').value,
+                wants: wantsValues,
+                referral: form.querySelector('select[name="referral"]').value
+            };
 
             submitBtn.textContent = 'Submitting...';
             submitBtn.disabled = true;
 
-            fetch(form.action, {
+            fetch('https://script.google.com/macros/s/AKfycbzPhhjj_CGbkn8i4b94-ePIpAGTmgDUQyfJWE3hJxyd_SLTmhrD91JBTEU4_y_znkOL_A/exec', {
                 method: 'POST',
-                body: formData,
+                mode: 'no-cors',
                 headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    document.getElementById('signupForm').classList.add('hidden');
-                    document.getElementById('successMessage').classList.add('show');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                } else {
-                    throw new Error('Form submission failed');
-                }
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(() => {
+                document.getElementById('signupForm').classList.add('hidden');
+                document.getElementById('successMessage').classList.add('show');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }).catch(error => {
                 submitBtn.textContent = 'Join Side Project Network';
                 submitBtn.disabled = false;
