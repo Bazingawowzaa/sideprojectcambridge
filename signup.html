@@ -168,7 +168,12 @@
             </div>
 
             <div class="signup-form" id="signupForm">
-                <form action="https://formspree.io/f/xeookoqe" method="POST" id="actualForm">
+                <form action="https://formsubmit.co/sideprojectcambridge@gmail.com" method="POST" id="actualForm">
+                    <!-- FormSubmit configuration -->
+                    <input type="hidden" name="_subject" value="New signup: Side Project Network">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+
                     <div class="form-group">
                         <label>Name <span class="required">*</span></label>
                         <input type="text" name="name" required placeholder="Your full name">
@@ -295,6 +300,10 @@
 
             const form = e.target;
             const formData = new FormData(form);
+            const submitBtn = form.querySelector('.submit-btn');
+
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
 
             fetch(form.action, {
                 method: 'POST',
@@ -306,10 +315,13 @@
                 if (response.ok) {
                     document.getElementById('signupForm').classList.add('hidden');
                     document.getElementById('successMessage').classList.add('show');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 } else {
-                    alert('Oops! There was a problem. Please try again or email us directly at sideprojectcambridge@gmail.com');
+                    throw new Error('Form submission failed');
                 }
             }).catch(error => {
+                submitBtn.textContent = 'Join Side Project Network';
+                submitBtn.disabled = false;
                 alert('Oops! There was a problem. Please try again or email us directly at sideprojectcambridge@gmail.com');
             });
         });
