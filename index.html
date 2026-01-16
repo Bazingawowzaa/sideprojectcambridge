@@ -29,7 +29,9 @@
         <div class="hero-content">
             <p class="hero-tag">University of Cambridge</p>
             <h1 class="hero-title">Side Project Network</h1>
-            <p class="hero-subtitle">Cambridge's home for curious builders</p>
+            <p class="hero-subtitle">
+                <span class="typewriter"></span>
+            </p>
             <p class="hero-description">
                 A community for students, researchers, and early-career professionals
                 building things alongside their main work.
@@ -44,6 +46,17 @@
                 <div class="shape shape-1"></div>
                 <div class="shape shape-2"></div>
                 <div class="shape shape-3"></div>
+            </div>
+            <!-- Floating Emojis -->
+            <div class="floating-emojis">
+                <span class="floating-emoji" style="--delay: 0s; --x: 10%; --y: 20%;">&#128161;</span>
+                <span class="floating-emoji" style="--delay: 1s; --x: 85%; --y: 15%;">&#128640;</span>
+                <span class="floating-emoji" style="--delay: 2s; --x: 75%; --y: 70%;">&#127912;</span>
+                <span class="floating-emoji" style="--delay: 3s; --x: 15%; --y: 75%;">&#128187;</span>
+                <span class="floating-emoji" style="--delay: 0.5s; --x: 90%; --y: 45%;">&#128218;</span>
+                <span class="floating-emoji" style="--delay: 1.5s; --x: 5%; --y: 50%;">&#127911;</span>
+                <span class="floating-emoji" style="--delay: 2.5s; --x: 50%; --y: 85%;">&#128736;</span>
+                <span class="floating-emoji" style="--delay: 3.5s; --x: 30%; --y: 10%;">&#128142;</span>
             </div>
         </div>
     </section>
@@ -135,6 +148,30 @@
                     Instead, we're a supportive space where exploratory, non-linear,
                     and curiosity-driven pursuits are recognized and valued.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-target="31">0</span>
+                    <span class="stat-label">Cambridge Colleges</span>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-target="100">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Potential Members</span>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-target="24">0</span>
+                    <span class="stat-label">Project Categories</span>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-infinity">&#8734;</span>
+                    <span class="stat-label">Possibilities</span>
+                </div>
             </div>
         </div>
     </section>
@@ -372,6 +409,22 @@
                 </div>
             </div>
 
+            <!-- Random Idea Generator -->
+            <div class="idea-generator animate-on-scroll">
+                <div class="generator-content">
+                    <div class="generator-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                        </svg>
+                    </div>
+                    <h3>Need Inspiration?</h3>
+                    <p class="generator-result" id="generatorResult">Click the button to get a random project idea!</p>
+                    <button class="btn btn-primary generator-btn" id="generateBtn">
+                        <span class="btn-icon">&#10022;</span> Generate Random Idea
+                    </button>
+                </div>
+            </div>
+
             <div class="ideas-cta animate-on-scroll">
                 <p>Have a different idea? Perfect. Side projects don't fit into boxes.</p>
                 <a href="#join" class="btn btn-secondary">Share Your Project With Us</a>
@@ -467,6 +520,60 @@
                 <p class="join-note">
                     We'll send you details about upcoming events and how to get involved.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do I need to have a finished project to join?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Not at all! We welcome everyone at any stage - whether you have a vague idea, just started something, or are deep into a project. The point is to support each other's journeys, wherever they begin.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What if my project isn't "impressive" enough?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>There's no such thing! We celebrate curiosity, not achievement. Learning to knit, writing poems in your Notes app, or finally organizing your photo library - these all count. If it matters to you, it belongs here.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do I have to present at events?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Never required! Our socials are casual conversations. If you'd like to share at a Show & Tell, that's optional and always in a supportive environment. Come as a listener, a sharer, or both.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is this only for tech/startup projects?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Definitely not! We're intentionally broad. Creative projects, learning goals, hobbies, career exploration, community initiatives - anything you're doing alongside your main work counts as a side project.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I get involved?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Just sign up! We'll add you to our mailing list and invite you to upcoming events. Show up to a social, join an accountability circle, or just lurk until you're ready. There's no pressure.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -575,6 +682,150 @@
             el.classList.add('animate-on-scroll');
             observer.observe(el);
         });
+
+        // ===== TYPEWRITER EFFECT =====
+        const typewriterPhrases = [
+            "Cambridge's home for curious builders",
+            "Where side projects come to life",
+            "Build something alongside your studies",
+            "Explore, create, connect",
+            "Your ideas deserve attention"
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typewriterElement = document.querySelector('.typewriter');
+
+        function typeWriter() {
+            const currentPhrase = typewriterPhrases[phraseIndex];
+
+            if (isDeleting) {
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 30 : 80;
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                typeSpeed = 2000; // Pause at end
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % typewriterPhrases.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeWriter, typeSpeed);
+        }
+        typeWriter();
+
+        // ===== COUNTER ANIMATION =====
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(num => {
+                        const target = parseInt(num.getAttribute('data-target'));
+                        const duration = 2000;
+                        const step = target / (duration / 16);
+                        let current = 0;
+
+                        const updateCounter = () => {
+                            current += step;
+                            if (current < target) {
+                                num.textContent = Math.floor(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                num.textContent = target;
+                            }
+                        };
+                        updateCounter();
+                    });
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) counterObserver.observe(statsSection);
+
+        // ===== RANDOM IDEA GENERATOR =====
+        const projectIdeas = [
+            "Start a podcast interviewing fellow PhD students about their research journeys",
+            "Build a simple app that solves a problem in your daily academic life",
+            "Write a blog post explaining your research to a 12-year-old",
+            "Create an Instagram account documenting your learning process",
+            "Design a zine about a topic you're passionate about",
+            "Learn to code by building a personal website",
+            "Start a newsletter sharing interesting papers in your field",
+            "Create YouTube tutorials about your area of expertise",
+            "Build a community around a niche interest",
+            "Write fiction inspired by concepts from your research",
+            "Start a book club focused on non-fiction in your field",
+            "Create a data visualization of something you find interesting",
+            "Design merchandise for a cause you care about",
+            "Build a browser extension that improves your workflow",
+            "Record an audiobook of public domain works",
+            "Create a course teaching something you've mastered",
+            "Start a side consulting practice in your area of expertise",
+            "Build a tool that automates a tedious task",
+            "Write a children's book explaining complex concepts",
+            "Create a photography project documenting Cambridge life"
+        ];
+
+        const generateBtn = document.getElementById('generateBtn');
+        const generatorResult = document.getElementById('generatorResult');
+
+        if (generateBtn) {
+            generateBtn.addEventListener('click', function() {
+                this.classList.add('spinning');
+                generatorResult.classList.add('fade-out');
+
+                setTimeout(() => {
+                    const randomIdea = projectIdeas[Math.floor(Math.random() * projectIdeas.length)];
+                    generatorResult.textContent = randomIdea;
+                    generatorResult.classList.remove('fade-out');
+                    generatorResult.classList.add('fade-in');
+                    this.classList.remove('spinning');
+
+                    setTimeout(() => {
+                        generatorResult.classList.remove('fade-in');
+                    }, 300);
+                }, 300);
+            });
+        }
+
+        // ===== FAQ ACCORDION =====
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isOpen = faqItem.classList.contains('active');
+
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Open clicked item if it wasn't already open
+                if (!isOpen) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // ===== CONFETTI ON JOIN BUTTON HOVER =====
+        const joinBtn = document.querySelector('.join .btn-primary');
+        if (joinBtn) {
+            joinBtn.addEventListener('mouseenter', function() {
+                this.classList.add('celebrate');
+            });
+            joinBtn.addEventListener('mouseleave', function() {
+                this.classList.remove('celebrate');
+            });
+        }
     </script>
 </body>
 </html>
